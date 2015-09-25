@@ -1,4 +1,19 @@
 jQuery(document).ready(function(){
+    PersonID = parseInt(12341234);
+    if (PersonID) {
+        UserID = PersonID;
+        ReColorIndividual();
+        document.getElementById("SignIn").style.display='none';
+        document.getElementById("YouGrid").style.display='';
+        if (-1==PeopleIDs.indexOf(UserID)) {
+            PeopleIDs.push(UserID);
+            PeopleNames.push(document.getElementById('name').value);
+        }
+        document.getElementById("UserName").innerHTML=PeopleNames[PeopleIDs.indexOf(UserID)];
+    } else {
+//            alert(t.responseText);
+    }
+
     var makeClass = function(ele, flag){
         var day = 0, hours = -1, mins = 0, tmp = 0;
         if(flag){
